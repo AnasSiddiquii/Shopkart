@@ -3,15 +3,15 @@ import { PRODUCT_LIST, SEARCH_PRODUCT, SET_PRODUCT_LIST } from './constant';
 
 function* getProducts() {
     // let data = yield fetch('http://localhost:5000/products');
-    let data = yield fetch('http://localhost:5000/products');
+    let data = yield fetch('http://localhost:5002/products');
     data = yield data.json();
     console.warn("action is called", data)
     yield put({type: SET_PRODUCT_LIST, data})
 }
 
 function* searchProducts(data) {
-    // let result = yield fetch(`http://localhost:5001/products?${data.query}`);
-    let result = yield fetch(`http://localhost:5000/products/${data.query}`);
+    // let result = yield fetch(`http://localhost:5000/products?${data.query}`);
+    let result = yield fetch(`http://localhost:5002/products/${data.query}`);
     result = yield result.json();
     console.warn("action is called", result)
     yield put({type: SET_PRODUCT_LIST, data:result})
