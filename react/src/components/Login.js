@@ -22,7 +22,7 @@ const Login = () => {
             setError(true);
             return false
         }
-        let result = await fetch("http://localhost:5000/login", {
+        let result = await fetch("http://localhost:5002/login", {
             method: 'post',
             body: JSON.stringify({ email, password }),
             headers: {
