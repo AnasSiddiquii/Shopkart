@@ -27,7 +27,7 @@ function Main() {
       <div className='row mt-3'>
         {
           data.length>0?
-          data.map((item)=><div className='col-lg-2 col-md-3 items'>
+          data.map((item)=><div className='col-lg-2 col-md-3 items rounded'>
             <img className='image-fluid img' src={item.photo} alt="" />
             <div>Name : {item.name} </div>
             <div>Color : {item.color} </div>

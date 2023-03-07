@@ -10,7 +10,7 @@ function* getProducts() {
 }
 
 function* searchProducts(data) {
-    // let result = yield fetch(`http://localhost:5000/products?${data.query}`);
+    // let result = yield fetch(`http://localhost:5001/products?${data.query}`);
     let result = yield fetch(`http://localhost:5002/products/${data.query}`);
     result = yield result.json();
     console.warn("action is called", result)
